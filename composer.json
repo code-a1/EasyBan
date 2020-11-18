@@ -1,0 +1,8 @@
+{
+    "name": "code-a1/EasyBan",
+    "description": "A simple way to ban users with NovaGram",
+    "require": {
+        "php": "7.4",
+        "skrtdev/NovaGram": "*"
+    }
+}
