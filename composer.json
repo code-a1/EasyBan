@@ -5,5 +5,8 @@
     "require": {
         "php": ">=7.4",
         "skrtdev/novagram": "*"
+    },
+    "autoload": {
+        "psr-4": { "": "src/" }
     }
 }
