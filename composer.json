@@ -7,6 +7,6 @@
         "skrtdev/novagram": "*"
     },
     "autoload": {
-        "psr-4": { "": "src/" }
+        "files": ["src/ban.php"]
     }
 }
