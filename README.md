@@ -17,17 +17,6 @@ composer require code-a1/EasyBan
 Here a simple example that show how EasyBan work:
 
 ```php
-
-require __DIR__ . '/vendor/autoload.php';
-
-use skrtdev\NovaGram\Bot;
-use skrtdev\Telegram\Message;
-
-$Bot = new Bot("YOUR_TOKEN");
-
-$Bot->onMessage(function (Messsage $message) use ($Bot) {
-
-    if(isset($message->text) and $Bot->checkBan() == false){
     
         $chat = $message->chat;
         $text = $message->text;
@@ -46,13 +35,6 @@ $Bot->onMessage(function (Messsage $message) use ($Bot) {
             
         }
 
-        if($text === "/start"){
-        
-            $chat->sendMessage("Hi!");
-            
-        }
-    }
-});
 ```
 
 ## Methods
