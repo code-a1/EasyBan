@@ -3,7 +3,7 @@
     "description": "A simple way to ban users with NovaGram",
     "license":"MIT",
     "require": {
-        "php": "7.4",
+        "php": ">=7.4",
         "skrtdev/novagram": "*"
     }
 }
