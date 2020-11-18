@@ -1,5 +1,5 @@
 {
-    "name": "code-a1/EasyBan",
+    "name": "code-a1/easyban",
     "description": "A simple way to ban users with NovaGram",
     "require": {
         "php": "7.4",
