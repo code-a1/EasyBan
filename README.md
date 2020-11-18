@@ -10,7 +10,7 @@ To install EasyBan you must only download the file from the src folder (bot.php)
 
 ## Usage example
 
-Here a simple example that show how EasyBan work:
+Here a simple example that show how EasyBan works:
 
 ```php
     
