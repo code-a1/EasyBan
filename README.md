@@ -3,8 +3,13 @@
 
 EasyBan is a simple library extension for [NovaGram](https://github.com/skrtdev/NovaGram) ([See novagram docs](https://docs.novagram.ga/prototypes.html)) that allows you to ban the users of your bot.
 
+## Installation via Composer
 
-## Installation
+Install EasyBan via Composer
+```sh
+composer require code-a1/easyban dev-master
+```
+## Manual installation
 
 To install EasyBan you must only download the file from the src folder (bot.php) and require it on the file of your bot.
 
