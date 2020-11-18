@@ -7,7 +7,7 @@ EasyBan is a simple library extension for [NovaGram](https://github.com/skrtdev/
 
 Install EasyBan via Composer
 ```sh
-composer require code-a1/easyban dev-master
+composer require code-a1/easyban dev-main
 ```
 ## Manual installation
 
