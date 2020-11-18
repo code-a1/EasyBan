@@ -3,14 +3,36 @@
 use skrtdev\NovaGram\Bot;
 use skrtdev\Telegram\User;
 
-User::addMethod("checkBan", function () { //check if the user is banned (if is banned it returns true, else false)
+User::addMethod("isBanned", function () { //check if the user is banned (if is banned it returns true, else false)
 
     $result = $this->conversation("ban") === "banned" ? true : false;
     return $result;
 
 });
 
-Bot::addMethod("checkBan", function () { //check if the user is banned (if is banned it returns true, else false)
+User::addMethod("ban", function (string $reason = null) { // ban the user
+
+    $chat = $this->update->message->chat;
+    $db = $this->conversation("ban", "banned"); // set the converstation
+    $banmessage = isset($reason) ? "🚫 You were banned for $reason" : "🚫 You were banned";
+    $this->sendMessage($banmessage); // send the ban message to the user
+
+});
+
+User::addMethod("unban", function () { //unban the user
+
+    $chat = $this->update->message->chat;
+
+    if($this->conversation("ban") === "banned"){ // check if the user is banned
+
+        $user->clearConversation("ban"); //remove the conversation
+        $this->sendMessage($id, "😇 You were unBanned"); // send the unBan message to the user
+
+    } else $chat->sendMessage("😅 Ops! The user is not banned");
+
+});
+
+Bot::addMethod("isBanned", function () { //check if the user is banned (if is banned it returns true, else false)
     
     $user = $this->update->message->from;
     $result = $this->conversation("ban") === "banned" ? true : false;
