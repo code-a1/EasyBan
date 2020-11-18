@@ -35,7 +35,7 @@ Here a simple example that show how EasyBan works:
 
 ## Methods
 
-- checkBan() : You can use this method to check if a user is banned
+- isBanned() : You can use this method to check if a user is banned
 - banUser() : You can use this method to ban a user
 - unbanUser() : You can use this method to unBan a user
 
