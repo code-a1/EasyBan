@@ -35,7 +35,7 @@ User::addMethod("unban", function () { //unban the user
 Bot::addMethod("isBanned", function () { //check if the user is banned (if is banned it returns true, else false)
     
     $user = $this->update->message->from;
-    $result = $this->conversation("ban") === "banned" ? true : false;
+    $result = $user->conversation("ban") === "banned" ? true : false;
     return $result;
 
 });
