@@ -1,4 +1,5 @@
 # EasyBan
+[![Total Downloads](https://poser.pugx.org/code-a1/easyban/downloads)](https://packagist.org/packages/code-a1/easyban)
 > A simple way to ban users with NovaGram.
 
 EasyBan is a simple library extension for [NovaGram](https://github.com/skrtdev/NovaGram) ([See novagram docs](https://docs.novagram.ga/prototypes.html)) that allows you to ban the users of your bot.
