@@ -3,12 +3,8 @@
 use skrtdev\NovaGram\Bot;
 use skrtdev\Telegram\User;
 
-User::addMethod("isBanned", function () { //check if the user is banned (if is banned it returns true, else false)
-
-    $result = $this->conversation("ban") === "banned" ? true : false;
-    return $result;
-
-});
+// check if the user is banned (if is banned it returns true, else false)
+User::addMethod("isBanned", fn() => $this->conversation("ban") === "banned");
 
 User::addMethod("ban", function (string $reason = null) { // ban the user
 
@@ -33,10 +29,9 @@ User::addMethod("unban", function () { //unban the user
 });
 
 Bot::addMethod("isBanned", function () { //check if the user is banned (if is banned it returns true, else false)
-    
+
     $user = $this->update->message->from;
-    $result = $user->conversation("ban") === "banned" ? true : false;
-    return $result;
+    return $user->conversation("ban") === "banned";
 
 });
 

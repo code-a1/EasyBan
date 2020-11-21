@@ -4,7 +4,7 @@
     "license":"MIT",
     "require": {
         "php": ">=7.4",
-        "skrtdev/novagram": "*"
+        "skrtdev/novagram": ">=1.5.1"
     },
     "autoload": {
         "files": ["src/ban.php"]
