@@ -21,7 +21,7 @@ User::addMethod("unban", function () { //unban the user
 
     if($this->conversation("ban") === "banned"){ // check if the user is banned
 
-        $user->clearConversation("ban"); //remove the conversation
+        $this->clearConversation("ban"); //remove the conversation
         $this->sendMessage($id, "😇 You were unBanned"); // send the unBan message to the user
 
     } else $chat->sendMessage("😅 Ops! The user is not banned");
@@ -37,7 +37,6 @@ Bot::addMethod("isBanned", function () { //check if the user is banned (if is ba
 
 Bot::addMethod("banUser", function (int $id, string $reason = null) { // ban the user
 
-    $user = $this->update->message->from;
     $chat = $this->update->message->chat;
     $db = $this->getDatabase();
 
@@ -53,7 +52,6 @@ Bot::addMethod("banUser", function (int $id, string $reason = null) { // ban the
 
 Bot::addMethod("unbanUser", function (int $id) { //unban the user
 
-    $user = $this->update->message->from;
     $chat = $this->update->message->chat;
     $db = $this->getDatabase();
 
