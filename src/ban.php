@@ -22,9 +22,9 @@ User::addMethod("unban", function () { //unban the user
     if($this->conversation("ban") === "banned"){ // check if the user is banned
 
         $this->clearConversation("ban"); //remove the conversation
-        $this->sendMessage($id, "😇 You were unBanned"); // send the unBan message to the user
+        $this->sendMessage("😇 You were unBanned"); // send the unBan message to the user
 
-    } else $chat->sendMessage("😅 Ops! The user is not banned");
+    } else return false;
 
 });
 
