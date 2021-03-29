@@ -8,16 +8,13 @@ User::addMethod("isBanned", fn() => $this->conversation("ban") === "banned");
 
 User::addMethod("ban", function (string $reason = null) { // ban the user
 
-    $chat = $this->update->message->chat;
-    $db = $this->conversation("ban", "banned"); // set the converstation
+    $this->conversation("ban", "banned"); // set the converstation
     $banmessage = isset($reason) ? "🚫 You were banned for $reason" : "🚫 You were banned";
     $this->sendMessage($banmessage); // send the ban message to the user
 
 });
 
 User::addMethod("unban", function () { //unban the user
-
-    $chat = $this->update->message->chat;
 
     if($this->conversation("ban") === "banned"){ // check if the user is banned
 
